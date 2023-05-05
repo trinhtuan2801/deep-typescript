@@ -1,5 +1,5 @@
 // EMPTY set
-const x: never = 1
+const x: never = 1 // Error
 
 // UNIT types / iteral types 
 type A = 'A'
@@ -68,8 +68,8 @@ const SUBSET_SUPERSET = () => {
     const list: NumberList = [1, 2]
     const tuple: NumberTuple = [1, 2]
 
-    const list1: NumberList = tuple // superset <-assignable- subset
-    const tuple1: NumberTuple = list // subset <-unassignable- superset
+    const list1: NumberList = tuple // OK: superset <-assignable- subset
+    const tuple1: NumberTuple = list // ERROR: subset <-unassignable- superset
   }
 
   const DIFFERENT_TUPLE_LENGTH = () => {
