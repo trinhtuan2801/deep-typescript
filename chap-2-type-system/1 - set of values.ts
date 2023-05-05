@@ -76,7 +76,7 @@ const SUBSET_SUPERSET = () => {
     type Tuple2 = [number, number] // {0: number, 1: number, length: 2}
     type Tuple3 = [number, number, number] // {0: number, 1: number, 2: number, length: 3}
     const tuple2: Tuple2 = [1, 2]
-    const tuple3: Tuple3 = tuple2 // structure is different -> cant assign
+    const tuple3: Tuple3 = tuple2 // ERROR: structure is different -> cant assign
   }
 }
 
